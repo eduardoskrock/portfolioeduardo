@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#pillNav2{
+    margin-top: 1rem;
+}
+
+:root{
+    --principal-font: 'Orbitron';
+    --secundary-font: 'Poppins';
+}
+
+body{
+    background: #052D24;
+    color: white;
+}
+
+.section-hero, .section-card{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.section-hero::before{
+    content: ''; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 350px;
+    height: 350px;
+    background-color: #116b58; 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%);
+    filter: blur(170px); 
+    z-index: -1; 
+}
+
+.bg-primary{
+    background: #084437 !important;
+    color: black !important;
+}
+
+.ante-title{
+    padding: .2rem;
+    margin: 0;
+    font-family: var(--secundary-font);
+    font-size: 1rem;
+}
+
+.ante-title>p, .title>p, .description>p{
+    margin: 0; /* Remove margin do parágrafo */
+    padding: .2rem; /* Remove padding do parágrafo */
+}
+
+.title{
+    width: 80%;
+    font-family: var(--secundary-font);
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.description{
+    width: 80%;
+    text-align: center;
+}
+
+.accent-text{
+    color: #f39e00;
+    font-weight: 700;
+}
+.btn-cta-hero{
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+#btn-cta{
+    outline: none;
+    border-radius: 40px;
+    padding: 1rem 3rem;
+    border: none;
+}
+
+button:hover{
+    background-color: #ffffff;
+    color: #094638;
+    transition: .7s;
+}
+
+#btn-cta{
+    background: #0c5a48;
+    color: white;
+}
+
+#btn-cta:hover{
+    background-color: white;
+    color: #0c5a48;
+    transition: .7s;
+}
+
+#btn-second-cta{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.background-card{
+    background-color: #fff; /* Fundo branco do container */
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais intensa e borrada */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
+    padding: 4rem;
+    position: relative;
+}
+.background-card>h1{
+    font-family: var(--secundary-font);
+    color: #094638;
+}
+
+.background-card>p{
+    --secundary-font: 'Poppins';
+    margin-top: 10px;
+    color: #052D24;
+}
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Gradiente de desvanecimento nas bordas do contêiner */
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 24px;
+    animation: scroll-left 35s linear infinite;
+}
+
+/* Animação de movimento da direita para a esquerda */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Início da posição */
+    }
+    100% {
+        transform: translateX(-100%); /* Final da posição (loop) */
+    }
+}
+
+/* Ajusta o espaçamento entre as palavras */
+.marquee span {
+    display: inline-block;
+    margin-right: 30px; /* Espaço entre as palavras */
+    font-size: 1.1em;
+    color: rgb(197, 197, 197);
+}
+
+.marquee span::before {
+    content: "✓";
+    color: #00ff00; /* Cor do símbolo */
+    margin-right: 5px; /* Espaçamento entre a palavra e o símbolo */
+    font-size: 1em; /* Tamanho do símbolo, opcional */
+}
+
+.section-card{
+    background-color: white;
+}
+
+.section-beneficios{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgb(190, 190, 190);
+}
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanho igual */
+    grid-gap: 20px; /* Espaçamento entre os cards */
+    max-width: 1200px; /* Largura máxima do container */
+    width: 100%;
+}
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:nth-child(odd) {
+    background-color: #f1f1f1; /* Cor diferente para os cards ímpares */
+}
+.card-left {
+    flex: 1; /* Deixa a imagem ocupar 50% do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-right {
+    flex: 2; /* Deixa o conteúdo de texto ocupar 50% do card */
+    padding-left: 20px;
+}
+
+.card-right h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-right p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-right a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-right a:hover {
+    text-decoration: underline;
+}
+
+.card:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.btn.btn-info{
+    color: white;
+}
+
+.section-demonstration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.container-demonstration{
+    display: flex;
+    width: 100%;
+    padding: 3rem;
+}
+
+.container-demonstration.second{
+    background: #094638;
+    padding: 3rem;
+    margin: 0;
+    background-image: url('/img/teste.png');
+    background-size: contain; /* Ajusta a imagem ao tamanho do container */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+.left-side-demonstration{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.card-img{
+    background: pink;
+    border-radius: 20px;
+    width: 40%;
+    float: right;
+}
+
+.right-side-demonstration{
+    width: 50%;
+    height: 40vh;
+    text-align: start;
+    margin-left: 1rem;
+    color: black;
+}
+
+.content{
+    width: 60%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    margin: 0;    
+}
+
+.cta-button{
+    border-radius: 20px;
+}
+
+  
+.seal {
+margin: 1rem 2rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute; /* Posiciona o selo em relação à div */
+  top: -60px; /* Ajuste para posicionar acima da div */
+  right: -60px; /* Ajuste para posicionar fora da div */
+  background: white;
+  font-size: 14px;
+  font-weight: bold;
+  transform-origin: center center; /* Define o ponto de rotação */
+  animation: rotateSeal 2s alternate infinite; /* Animação de rotação em ambos os sentidos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(71, 71, 71);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Deslocamento, desfoque e opacidade */
+  }
+  
+  /* Animação de rotação */
+  @keyframes rotateSeal {
+    0% {
+      transform: rotate(0deg); /* Começa em 0 grau */
+    }
+    25% {
+      transform: rotate(20deg); /* 1/4 de rotação no sentido horário */
+    }
+    50% {
+      transform: rotate(0deg); /* Volta para 0 grau */
+    }
+    75% {
+      transform: rotate(-20deg); /* 1/4 de rotação no sentido anti-horário */
+    }
+    100% {
+      transform: rotate(0deg); /* Volta para 0 grau novamente */
+    }
+  }
+  
