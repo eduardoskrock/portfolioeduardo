@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | E. Skrock</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<<<<<<< HEAD
     <link rel="stylesheet" href="style.css">
+=======
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+>>>>>>> 66e567b (Atualização do layout)
 
 </head>
 <body>
@@ -34,16 +39,19 @@
             <p>Seu site é a porta de entrada para novos clientes e resultados concretos. Enquanto gastos comuns somem mês a mês, <br>um site profissional atrai novos clientes e gera vendas continuamente</p>
         </div>
         <div class="btn-cta-hero">
-            <button id="btn-cta">Entrar em contato ➜</button>
+            <button class="cta-button">Entrar em contato ➜</button>
             <button id="btn-second-cta">Ver os projetos</button>
         </div>
         <div class="img-hero">
             <img src="/img/teste." alt="">
         </div>
     </section>
+    
     <section class="section-card">
         <div class="background-card">
-            <div class="seal"><span>Projetos 100% personalizados</span></div>
+            <div class="seal"><i class="fas fa-bolt"></i>
+                <span>Projetos 100% personalizados</span></div>
+            <h5>Entregas em até <span class="accent-text">7 dias!</span></h5>
             <h1>Soluções completas para <br>digitalizar sua empresa</h1>
             <p>Criamos a presença que sua marca precisa. Em diferentes canais digitais.</p>
             <div class="marquee-container">
@@ -64,7 +72,39 @@
             </div>
         </div>
     </section>
+    <section class="how-it-works">
+        <p class="section-subtitle">Como funciona?</p>
+        <h1 class="section-title">Como crio um site que vende?</h1>
+        <div class="steps">
+            <div class="step">
+                <div class="icon-container">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <p class="step-title">1º passo: Branding</p>
+                <p class="step-description">Viewing the best structures</p>
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <div class="icon-container">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <p class="step-title">2º passo:  Desenvolvimento</p>
+                <p class="step-description">Copy and paste the page wireframes and edit in figma</p>
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <div class="icon-container">
+                    <i class="fa-solid fa-check-to-slot"></i>
+                </div>
+                <p class="step-title">3º passo: Entrega</p>
+                <p class="step-description">The page wireframes and edit in Figma (optional)</p>
+            </div>
+        </div>
+        <button class="cta-button">I want access to The Box</button>
+    </section>
     <section class="section-beneficios">
+        <i class="fas fa-bolt"></i>
+            <h3>Qualifique seus leads</h3>
         <h1>Explore o melhor da sua empresa</h1>
         <p>Hoje, seu site e suas redes sociais são mais do que apenas uma vitrine online – eles são o coração digital do seu negócio! <br>Clientes em potencial já estão procurando soluções como as suas, e a primeira impressão que eles têm é decisiva.<br> Um site bem desenvolvido e uma presença ativa e profissional nas redes sociais são o caminho para atrair, engajar e fidelizar mais clientes.</p>
         <div class="container-cards">
@@ -73,9 +113,9 @@
                     <img src="https://via.placeholder.com/150" alt="Imagem 1">
                 </div>
                 <div class="card-right">
-                    <h2>Título do Card 1</h2>
-                    <p>Descrição breve do conteúdo do card 1. Aqui você pode incluir mais detalhes sobre o item.</p>
-                    <a href="#">Leia mais</a>
+                    <h2>Landing Page que Converte</h2>
+                    <p>Atraia visitantes e transforme cliques em clientes com uma landing page feita sob medida para capturar leads e gerar vendas de forma estratégica.</p>
+                    <a href="#">Quero uma Landing Page</a>
                 </div>
             </div>
             <div class="card">
@@ -83,9 +123,9 @@
                     <img src="https://via.placeholder.com/150" alt="Imagem 2">
                 </div>
                 <div class="card-right">
-                    <h2>Título do Card 2</h2>
-                    <p>Descrição breve do conteúdo do card 2. Aqui você pode incluir mais detalhes sobre o item.</p>
-                    <a href="#">Leia mais</a>
+                    <h2>Site Institucional Profissional</h2>
+                    <p>Mostre o valor da sua marca com um site institucional que inspire confiança e reforce sua credibilidade, garantindo uma presença sólida e impactante.</p>
+                    <a href="#">Quero uma Site Completo</a>
                 </div>
             </div>
             <div class="card">
@@ -93,9 +133,9 @@
                     <img src="https://via.placeholder.com/150" alt="Imagem 3">
                 </div>
                 <div class="card-right">
-                    <h2>Título do Card 3</h2>
-                    <p>Descrição breve do conteúdo do card 3. Aqui você pode incluir mais detalhes sobre o item.</p>
-                    <a href="#">Leia mais</a>
+                    <h2>Página de Lançamento Impactante</h2>
+                    <p>Desperte a curiosidade e gere expectativa com uma página de lançamento dinâmica e envolvente, criada para impulsionar o sucesso do seu produto ou serviço.</p>
+                    <a href="#">Quero uma Página de Lançamento</a>
                 </div>
             </div>
             <div class="card">
@@ -103,36 +143,38 @@
                     <img src="https://via.placeholder.com/150" alt="Imagem 4">
                 </div>
                 <div class="card-right">
-                    <h2>Título do Card 4</h2>
-                    <p>Descrição breve do conteúdo do card 4. Aqui você pode incluir mais detalhes sobre o item.</p>
-                    <a href="#">Leia mais</a>
+                    <h2>Artes para Redes Sociais</h2>
+                    <p>Engaje seu público com artes visuais únicas e estratégicas para Instagram, criadas para fortalecer a identidade da sua marca e aumentar sua visibilidade nas redes.</p>
+                    <a href="#">Quero Artes para Redes Sociais</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section-demonstration">
-        <h1>Explore o melhor da sua empresa</h1>
-        <p>Hoje, seu site e suas redes sociais são mais do que apenas uma vitrine online –<br> eles são o coração digital do seu negócio!</p>
-        <div class="container-demonstration">
-            <div class="left-side-demonstration">
-                <div class="card-img">
+    <section class="container">
+        <div class="right-section">
+            <p class="tagline">AGENCY OF RECORD</p>
+            <h1>A new connection protocol for work</h1>
+            <p class="description">Say goodbye to the old and outdated payroll system. Modern work demands a new employment protocol between talents and businesses. Ruul pioneers this revolutionary transformation.</p>
+            <div class="highlight-box">
+                <p>Agency of Record (AOR) service enables off-payroll talents and organizations to work together in a streamlined and compliant manner, simplifying cross-border work relations for both parties.</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <p><strong>Streamlined compliance</strong></p>
+                    <p>Remain compliant with local regulations with zero paperwork.</p>
+                </div>
+                <div class="feature">
+                    <p><strong>Financial enhancement</strong></p>
+                    <p>Ease off your payroll burden with a lighter connection protocol.</p>
+                </div>
+                <div class="feature">
+                    <p><strong>Easy attachment & detachment</strong></p>
+                    <p>The agile connection protocol for engaging with your workforce.</p>
                 </div>
             </div>
-            <div class="right-side-demonstration">
-                <div class="content">
-                    <h2>Transforme Suas Ideias em Realidade</h2>
-                    <p>Descubra as ferramentas e estratégias para impulsionar o seu negócio. Com nossa ajuda, você alcançará resultados que realmente importam. Este é o momento de dar o próximo passo e crescer de forma estratégica!</p>
-                    <button class="cta-button">Saiba Mais</button>
-                </div>
-            </div>
-        </div>
-        <div class="container-demonstration second">
-            <div class="left-side-demonstration second">
-                <div class="card-img"></div>
-            </div>
-            <div class="right-side-demonstration"></div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js" defer> </script>
 </body>
 </html>

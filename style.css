@@ -10,9 +10,12 @@
     --secundary-font: 'Poppins';
 }
 
-body{
-    background: #052D24;
-    color: white;
+header{
+    background: #b9b9b9;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-hero, .section-card{
@@ -24,6 +27,10 @@ body{
     width: 100%;
 }
 
+.section-hero{
+    background: #e4e4e4;
+}
+
 .section-hero::before{
     content: ''; 
     position: absolute;
@@ -31,7 +38,7 @@ body{
     left: 50%; 
     width: 350px;
     height: 350px;
-    background-color: #116b58; 
+    background-color: #9811aa; 
     border-radius: 50%; 
     transform: translate(-50%, -50%);
     filter: blur(170px); 
@@ -69,7 +76,7 @@ body{
 }
 
 .accent-text{
-    color: #f39e00;
+    background-image: #8d8d8d;
     font-weight: 700;
 }
 .btn-cta-hero{
@@ -111,7 +118,7 @@ button:hover{
 }
 
 .background-card{
-    background-color: #fff; /* Fundo branco do container */
+    background-color: #c2c1c146; /* Fundo branco do container */
     width: 80%;
     border-radius: 20px;
     display: flex;
@@ -119,11 +126,24 @@ button:hover{
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais intensa e borrada */
+    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
     padding: 4rem;
     position: relative;
+    border: 4px solid #094638;
 }
+
+.background-card::before{
+    content: ''; 
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff5e; 
+    border-radius: 50%; 
+    filter: blur(170px); 
+    z-index: -0.5; 
+}
+
 .background-card>h1{
     font-family: var(--secundary-font);
     color: #094638;
@@ -133,6 +153,12 @@ button:hover{
     --secundary-font: 'Poppins';
     margin-top: 10px;
     color: #052D24;
+}
+
+.background-card:hover{
+    background-color: #ffffff;
+    transition: 1s;
+    border: 4px solid #094638;
 }
 .marquee-container {
     width: 100%;
@@ -165,7 +191,7 @@ button:hover{
     display: inline-block;
     margin-right: 30px; /* Espaço entre as palavras */
     font-size: 1.1em;
-    color: rgb(197, 197, 197);
+    color: rgb(32, 32, 32);
 }
 
 .marquee span::before {
@@ -186,9 +212,13 @@ button:hover{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 3rem;
+    padding: 4rem;
     text-align: center;
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(150, 25, 253);
+}
+
+.section-beneficios>h1, .section-beneficios>p, .section-beneficios>h3{
+    color: #ffffff;
 }
 .container-cards{
     display: grid;
@@ -208,12 +238,13 @@ button:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align: center;
+    text-align: left;
 }
 
 .card:nth-child(odd) {
-    background-color: #f1f1f1; /* Cor diferente para os cards ímpares */
+    background-color: #fff !important; /* Cor diferente para os cards ímpares */
 }
+
 .card-left {
     flex: 1; /* Deixa a imagem ocupar 50% do card */
     display: flex;
@@ -272,6 +303,10 @@ button:hover{
     color: black;
 }
 
+.section-demonstration>h1{
+    color: #094638;
+}
+
 .container-demonstration{
     display: flex;
     width: 100%;
@@ -279,7 +314,6 @@ button:hover{
 }
 
 .container-demonstration.second{
-    background: #094638;
     padding: 3rem;
     margin: 0;
     background-image: url('/img/teste.png');
@@ -332,18 +366,20 @@ margin: 1rem 2rem;
   height: 120px;
   border-radius: 50%;
   position: absolute; /* Posiciona o selo em relação à div */
-  top: -60px; /* Ajuste para posicionar acima da div */
-  right: -60px; /* Ajuste para posicionar fora da div */
-  background: white;
+  top: -75px; /* Ajuste para posicionar acima da div */
+  background: linear-gradient(to right, #ff00c7, #8b00ff);
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
   transform-origin: center center; /* Define o ponto de rotação */
   animation: rotateSeal 2s alternate infinite; /* Animação de rotação em ambos os sentidos */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Deslocamento, desfoque e opacidade */
+  line-height: 15px;
   }
   
   /* Animação de rotação */
@@ -365,3 +401,209 @@ margin: 1rem 2rem;
     }
   }
   
+  .container {
+    display: flex;
+    padding: 2rem;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-right: 1px solid #ddd;
+}
+
+.logo-box {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.line {
+    width: 30%;
+    height: 2px;
+    background: linear-gradient(to right, #ff00c7, #8b00ff);
+    background-size: 200% 100%;
+    animation: slide-gradient 5s linear infinite; /* Aumentei o tempo de duração para ver o efeito mais lentamente */
+}
+
+/* Animação do gradiente */
+@keyframes slide-gradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+.right-section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+    background-color: #fef7e0;
+    padding: 1rem;
+    border-left: 4px solid #e3b505;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.feature {
+    flex: 1 1 200px;
+    padding: 1rem;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.how-it-works {
+    text-align: center;
+    width: 100%;
+    padding: 4rem;
+}
+
+/* Título e subtítulo */
+.section-subtitle {
+    color: #b08bfc;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Container de passos */
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+/* Cada passo */
+.step {
+    text-align: center;
+    width: 30%;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Move um pouco para baixo para um efeito de subida */
+    transition: opacity 1s ease, transform 1s ease; /* Transição para o efeito de fade e subida */
+}
+
+.step.visible {
+    opacity: 1;
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.step-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.step-description {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Linha entre passos */
+.line {
+    width: 30%;
+    height: 2px;
+    background: linear-gradient(to right, #ff00c7, #8b00ff);
+}
+
+/* Botão de chamada para ação */
+.cta-button {
+    background: linear-gradient(to right, #ff00c7, #8b00ff);
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 1s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #8b00ff, #ff00c7);
+}
