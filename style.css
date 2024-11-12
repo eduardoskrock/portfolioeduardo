@@ -11,7 +11,7 @@
 }
 
 header{
-    background: #b9b9b9;
+    background: #e6e6e6;
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -28,7 +28,16 @@ header{
 }
 
 .section-hero{
-    background: #e4e4e4;
+    background: #f5f5f5;
+}
+
+.container-hero{
+    background: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
 }
 
 .section-hero::before{
@@ -55,11 +64,13 @@ header{
     margin: 0;
     font-family: var(--secundary-font);
     font-size: 1rem;
+    color: white;
 }
 
 .ante-title>p, .title>p, .description>p{
     margin: 0; /* Remove margin do parágrafo */
-    padding: .2rem; /* Remove padding do parágrafo */
+    padding: 2rem; /* Remove padding do parágrafo */
+    color: white;
 }
 
 .title{
@@ -68,11 +79,17 @@ header{
     font-size: 2.2rem;
     text-align: center;
     line-height: 2.5rem;
+    color: white;
+}
+
+.title>h1{
+    color: white;
 }
 
 .description{
     width: 80%;
     text-align: center;
+    color: white;
 }
 
 .accent-text{
@@ -367,8 +384,8 @@ margin: 1rem 2rem;
   border-radius: 50%;
   position: absolute; /* Posiciona o selo em relação à div */
   top: -75px; /* Ajuste para posicionar acima da div */
-  background: linear-gradient(to right, #ff00c7, #8b00ff);
-  color: #fff;
+  background: #fff;
+  color: #272727;
   font-size: 14px;
   font-weight: bold;
   transform-origin: center center; /* Define o ponto de rotação */
@@ -377,8 +394,7 @@ margin: 1rem 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Deslocamento, desfoque e opacidade */
+  box-shadow: 0px 20px 15px rgba(101, 28, 161, 0.5); /* Deslocamento, desfoque e opacidade */
   line-height: 15px;
   }
   
@@ -463,6 +479,12 @@ margin: 1rem 2rem;
 .right-section {
     flex: 1;
     padding: 2rem;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tagline {
@@ -485,9 +507,9 @@ h1 {
 }
 
 .highlight-box {
-    background-color: #fef7e0;
+    background-color: #fafafa;
     padding: 1rem;
-    border-left: 4px solid #e3b505;
+    border-left: 4px solid #4005e3;
     font-size: 1rem;
     color: #555;
     margin-bottom: 1.5rem;
@@ -606,4 +628,151 @@ h1 {
 
 .cta-button:hover {
     background: linear-gradient(to right, #8b00ff, #ff00c7);
+}
+
+.animated-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+  }
+  
+  /* Círculos concêntricos animados */
+  .circles {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #6a0dad, #00bfff);
+    opacity: 0.2;
+    animation: pulse 6s infinite ease-in-out;
+  }
+  
+  /* Tamanhos e opacidades diferentes para os círculos */
+  .circle1 {
+    width: 400px;
+    height: 400px;
+    animation-delay: 0s;
+  }
+  
+  .circle2 {
+    width: 500px;
+    height: 500px;
+    animation-delay: 1s;
+  }
+  
+  .circle3 {
+    width: 600px;
+    height: 600px;
+    animation-delay: 2s;
+  }
+  
+  .circle4 {
+    width: 700px;
+    height: 700px;
+    animation-delay: 3s;
+  }
+  
+  /* Animação para os círculos */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.1;
+    }
+  }
+  
+  /* Estilo do retângulo com imagem */
+  .rectangle {
+position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rectangle img {
+    width: 400px;
+    height: 100%;
+    object-fit: fill;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .interactive-features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 3rem;
+    background-color: white;
+    flex-wrap: wrap; /* Para garantir que os itens se ajustem em telas menores */
+}
+
+/* Estilo para os boxes de recursos */
+.feature-box {
+    flex: 1 1 300px; /* Flexível, com tamanho mínimo de 300px */
+    max-width: 300px;
+    padding: 3rem;
+    border-radius: 35px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os títulos dos boxes */
+.feature-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Cores específicas para cada box */
+.quiz-box {
+    background-color: #A066FF;
+}
+
+.creative-box {
+    background-color: #735DFF;
+}
+
+.games-box {
+    background-color: #FFB824;
+}
+
+/* Responsividade: Ajuste para dispositivos menores */
+@media (max-width: 768px) {
+    .interactive-features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-box {
+        width: 100%; /* Para ocupar toda a largura em telas muito pequenas */
+    }
+
+    .interactive-features {
+        padding: 10px;
+    }
 }
