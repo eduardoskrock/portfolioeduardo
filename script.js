@@ -17,3 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(step);
     });
 });
+
+// Obtém o elemento do header
+const header = document.getElementById('header');
+
+// Função para mostrar o header quando o scroll for feito
+window.onscroll = function() {
+    if (window.scrollY > 50) { // Quando o usuário rolar mais de 50px
+        header.classList.add('show'); // Adiciona a classe "show"
+    } else {
+        header.classList.remove('show'); // Remove a classe "show" se o scroll for menor que 50px
+    }
+};

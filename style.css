@@ -16,12 +16,89 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    background: #fdfdfd;
+    margin: 0;
 }
 
+.list-header{
+    display: flex;
+    gap: 2rem;
+    font-family: var(--secundary-font);
+    list-style: none;
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.container-heroo{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content{
+    width: 40%;
+}
+
+.title-hero{
+    color: #8b00ff;
+    font-weight: 700;
+    font-family: var(--principal-font);
+    font-size: 3rem;
+}
+
+.title-cards-hero{
+    color: #735DFF;
+    font-weight: 700;
+    font-family: var(--secundary-font);
+    font-size: 1.2rem;
+}
+
+.button-ctn-hero{
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    outline: none;
+    border: 2px solid #f5f5f5;
+    background: #fff;
+}
+
+.right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 1rem;
+}
+
+.card-hero{
+    width: 75%;
+    background: white;
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 6px 10px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.6);
+}   
+
+.card-hero.card2{
+    background: rgb(190, 123, 216);
+    margin-left: 5rem;
+    color: #fff; /* Inicialmente a cor do texto é branca, garantindo contraste */
+    animation: changeBackground 12s infinite; /* Define a animação para troca de cores */
+}
 /*Seção Hero*/
 
 .section-hero, .section-card{
-    padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,11 +108,11 @@ header{
 
 .section-hero{
     background: #f5f5f5;
+    padding: 5rem;
 }
 
 .container-hero{
-    background: rgb(32, 32, 32);
-    background-image: url('img/3303245.jpg');
+    background: rgb(165, 38, 190);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -102,23 +179,21 @@ header{
 /*Segunda seção - abaixo do hero*/
 
 .section-card{
-    background-color: var(--color-one);
+    display: flex;
+
 }
 
 .background-card{
-    background-color: #ffffff46; /* Fundo branco do container */
-    width: 80%;
-    border-radius: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animação suave ao interagir */
     padding: 4rem;
     position: relative;
-    border: 4px solid #e2e2e2;
+    margin-top: 4rem;
 }
 
 .background-card::before{
@@ -182,7 +257,7 @@ header{
     gap: 1rem;
     padding: 4rem;
     text-align: center;
-    background-color: rgb(150, 25, 253);
+    background-color: rgb(161, 161, 161);
 }
 
 .section-beneficios>h1, .section-beneficios>p, .section-beneficios>h3{
@@ -341,8 +416,9 @@ margin: 1rem 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 20px 15px rgba(101, 28, 161, 0.5); /* Deslocamento, desfoque e opacidade */
+  box-shadow: 0px 8px 15px rgba(214, 214, 214, 0.774); /* Deslocamento, desfoque e opacidade */
   line-height: 15px;
+  border: 2px solid rgb(218, 218, 218);
   }
   
   .container {
@@ -746,6 +822,29 @@ position: absolute;
     }
     }
 
+    @keyframes changeBackground {
+        0% {
+            background: rgb(190, 123, 216); /* Roxo claro */
+            color: white;
+        }
+        25% {
+            background: rgb(80, 162, 255); /* Azul claro */
+            color: black;
+        }
+        50% {
+            background: rgb(56, 39, 106); /* Roxo escuro */
+            color: white;
+        }
+        75% {
+            background: rgb(0, 51, 153); /* Azul escuro */
+            color: white;
+        }
+        100% {
+            background: rgb(190, 123, 216); /* Roxo claro (volta ao começo) */
+            color: white;
+        }
+    }
+    
 
 /* Responsividade: Ajuste para dispositivos menores */
 @media (max-width: 768px) {
